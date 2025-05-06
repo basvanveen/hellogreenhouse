@@ -1,0 +1,19 @@
+{
+    "temperaturePin": 17,
+    "luxSclPin": 22,
+    "luxSdaPin": 21,
+    "lightMode": "lux", 
+    "waterMode": "time",
+    "waterDurationSeconds": 10,
+    "waterTimes": ["21:03"],
+    "waterValve1": "off",
+    "waterValve2": "off",
+    "waterValve1Pin": 0,
+    "waterValve2Pin": 14,    
+    "ledLuxLevel": 1,
+    "ledLuxBackoffSeconds": 20,
+    "ledStrip1": "off",
+    "ledStrip2": "off",
+    "ledStrip1Pin": 25,
+    "ledStrip2Pin": 26
+}
