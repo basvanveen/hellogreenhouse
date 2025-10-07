@@ -10,7 +10,7 @@ import sys
 debugmode = False
 
 app = Microdot()
-controller = GreenHouse("kaskas", debugmode )
+controller = GreenHouse("greenhouse", debugmode )
 
 @app.route('/')
 async def index(request):
