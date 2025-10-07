@@ -21,9 +21,10 @@ light at earlier stages and watering on specific intervals. Although i really en
 
 * 12V Solenoid valve attached to main water system
 * 12V submersible pump inside water bucket or small tank
+* Sprinkler system attached to either pump or valve
 * 12V Old Car Battery
 * 12V BLUE RED LED STRIPS
-* 120W SOLAR PANEL + inventer
+* 120W SOLAR PANEL + inverter
 * 4 Channel Relay (elegoo)
 * ESP32 Firebeetle2 (with external battery)
 * BME280 temp sensor  
@@ -90,6 +91,56 @@ ledStrip1 : can be either `on` or `off`, used when lightMode is `manual` to on/o
 ledStrip2 : can be either `on` or `off`, used when lightMode is `manual` to on/off light
 ledStrip1Pin : specific PIN.OUT to turn on/off light/LED strip
 ledStrip2Pin : specific PIN.OUT to turn on/off light/LED strip
+```
+
+## API
+
+Currently I exposed `2` api routes, one where you can do a `POST` call to set/change specific key-values under `/control` and one
+to retrieve metrics under `/metrics`.
+
+### examples
+
+POST `/control`
+```bash
+curl -H "Content-Type: application/json" -X POST -d '{ "waterMode":"manual","lightMode":"lux", "waterValve1": "off", "ledLuxLevel": 1, "waterTimes": ["08:00"]}' http://CONTROLLER_IP/control | jq
+```
+
+GET `/metrics`
+```bash
+curl http://CONTROLLER_IP/metrics | jq
+```
+
+metric example output :
+
+```bash
+➜  ~ curl --silent http://192.168.10.134/metrics | jq
+{
+  "waterValve1Pin": 21,
+  "luxSdaPin": 6,
+  "waterValve2Pin": 20,
+  "waterDurationSeconds": 60,
+  "ledLuxLevel": 0,
+  "currentLux": 268.3333,
+  "waterValve1": "off",
+  "ledStrip1Pin": 23,
+  "waterValve2": "off",
+  "luxSclPin": 7,
+  "currentHumidity": "64.09%",
+  "waterTimes": [
+    "16:49",
+    "16:51",
+    "16:50"
+  ],
+  "ledStrip1": "off",
+  "ledStrip2": "off",
+  "currentCelsius": "19.34C",
+  "waterMode": "manual",
+  "lightMode": "lux",
+  "temperaturePin": 17,
+  "ledLuxBackoffSeconds": 20,
+  "currentPressure": "1025.27hPa",
+  "ledStrip2Pin": 22
+}
 ```
 
 ## impression / some pictures 📸
