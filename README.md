@@ -1,4 +1,4 @@
-# HelloGreenHouse : ESP32 greenhouse automation
+# HelloGreenHouse: ESP32 greenhouse automation
 
 A simple playground for some of my DYI greenhouse automations. One of my favorite hobbies is spending time outside in our garden
  and in our small greenhouse. Although it's not a big one i am always surprised by how much can grow in such a minimal space 🌱
