@@ -1,12 +1,12 @@
 # HelloGreenHouse : ESP32 greenhouse automation
 
 A simple playground for some of my DYI greenhouse automations. One of my favorite hobbies is spending time outside in our garden
- or in our small greenhouse. Although it's not a big one i am always surprised on how much can grow in such a minimal space 🌱
+ and in our small greenhouse. Although it's not a big one i am always surprised by how much can grow in such a minimal space 🌱
 
 Out of curiousity I started creating some automated help to promote the growth of my plants/seedlings, primarily focussed on adding
-light at earlier stages and watering on specific intervals. Although i really enjoyed creating this, and there are tons of other things
+light at earlier stages and watering on specific intervals. Although I really enjoy creating this, and there are tons of other things
  you can add like soil-humidity measuring, adding heat pads etc... I came to the conclusion that I prefer gardening/spending time in my
-  my greenhouse without involving tech, maybe only intervalled watering when i'm on vacation for some weeks 🙃 
+ my greenhouse without involving tech, maybe only intervalled watering when i'm on vacation for some weeks 🙃 
 
 ## Capabilites
 
@@ -22,8 +22,8 @@ light at earlier stages and watering on specific intervals. Although i really en
 * 12V Solenoid valve attached to main water system
 * 12V submersible pump inside water bucket or small tank
 * Sprinkler system attached to either pump or valve
-* 12V Old Car Battery
-* 12V BLUE RED LED STRIPS
+* 12V Old Car Battery (76Ah)
+* 12V BLUE/RED SPECTRUM LED STRIPS
 * 120W SOLAR PANEL + inverter
 * 4 Channel Relay (elegoo)
 * ESP32 Firebeetle2 (with external battery)
@@ -95,8 +95,8 @@ ledStrip2Pin : specific PIN.OUT to turn on/off light/LED strip
 
 ## API
 
-Currently I exposed `2` api routes, one where you can do a `POST` call to set/change specific key-values under `/control` and one
-to retrieve metrics under `/metrics`.
+Currently I expose `2` api routes, one where you can do a `POST` call to set/change specific key-values under `/control` and one
+to retrieve metrics under `/metrics`. And of course the default `/` one but that just serves you a placeholder page with a welcome string 👋
 
 ### examples
 
