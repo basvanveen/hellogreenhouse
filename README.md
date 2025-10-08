@@ -5,7 +5,7 @@ A simple playground for some of my DYI greenhouse automations. One of my favorit
 
 Out of curiousity I started creating some automated help to promote the growth of my plants/seedlings, primarily focussed on adding
 light at earlier stages and watering on specific intervals. Although I really enjoy creating this, and there are tons of other things
- you can add like soil-humidity measuring, adding heat pads etc... I came to the conclusion that I prefer gardening/spending time in my
+ you can add like soil/moisture/acidity/humidity measuring, adding heat pads etc... I came to the conclusion that I prefer gardening/spending time in my
  my greenhouse without involving tech, maybe only intervalled watering when i'm on vacation for some weeks 🙃 
 
 ## Capabilites
